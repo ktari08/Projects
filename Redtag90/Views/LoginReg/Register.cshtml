@@ -1,0 +1,48 @@
+﻿@model User
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="~/css/register.css"/>
+    <title>RedTag90</title>
+</head>
+<body>
+    <h2 class="register_title">Create an account</h2>
+    <h2 class="register_title">to start selling</h2>
+    <div class="register">
+        <form asp-controller="LoginReg" asp-action="Register" method="post">
+            <p>First Name: </p>
+            <input class="register_input" type="text" asp-for="first_name">
+            <br>
+            <span asp-validation-for="first_name" style="color: red;"></span>
+            <br>
+            <p>Last Name: </p>
+            <input class="register_input" type="text" asp-for="last_name">
+            <br>
+            <span asp-validation-for="last_name" style="color: red;"></span>
+            <br>
+            <p>Email: </p>
+            <input class="register_input" type="email" asp-for="email">
+            <br>
+            <span asp-validation-for="email" style="color: red;"></span>
+            <br>
+            <p>Password: </p>
+            <input class="register_input" type="password" asp-for="password">
+            <br>
+            <span asp-validation-for="password" style="color: red;"></span>
+            <br>
+            <p>Confirm Password: </p>
+            <input class="register_input" type="password" asp-for="confirm_password">
+            <br>
+            <span asp-validation-for="confirm_password" style="color: red;"></span>
+            <br>
+            <input type="submit" value="Register">
+        </form>
+        <br>
+        <p>Already have an account? <a href="login">Sign-in here</a></p>
+    </div>
+</body>
+</html>

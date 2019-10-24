@@ -1,0 +1,37 @@
+@model Product
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Redtag90</title>
+</head>
+<body>
+    <form asp-action="CreateProduct" asp-controller="Home">
+        <p>Title: </p>
+        <input type="text" asp-for="title">
+        <br>
+        <span asp-validation-for="title" style="color: red;"></span>
+        <br>
+        <p>Description: </p>
+        <input type="text" asp-for="description">
+        <br>
+        <span asp-validation-for="description" style="color: red;"></span>
+        <br>
+        <p>Price: </p>
+        <input type="text" asp-for="price">
+        <br>
+        <span asp-validation-for="price" style="color: red;"></span>
+        <br>
+        <p>Quantity: </p>
+        <input type="text" asp-for="quantity">
+        <br>
+        <span asp-validation-for="quantity" style="color: red;"></span>
+        <br>
+        <p>Redtag</p>
+        <input type="submit" value="Create">
+    </form>
+</body>
+</html>
